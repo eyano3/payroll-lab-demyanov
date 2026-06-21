@@ -22,7 +22,7 @@ public class App {
 
     //calculate values
 
-    double grossPay = calculator.calculateGrossPay(numHoursWorked, numDependents);
+    double grossPay = calculator.calculateGrossPay(numHoursWorked);
 
     double socialSecurityTax = calculator.calculateSocialSecurityTax(grossPay);
 
@@ -34,13 +34,13 @@ public class App {
 
     double insuranceCharge = calculator.calculateInsuranceRate(numDependents);
 
-    double unionsDues = calculator.getUnionDues();
+    double unionDues = calculator.getUnionDues();
 
     double netPay = calculator.calculateNetPay(numHoursWorked, numDependents);
 
     //print output and thank user
 
-    System.out.println(formatter.formatRegularEmployee(numHoursWorked, payRate, grossPay, socialSecurityTax, stateTax, federalTax, unionDues, insuranceCharge,  netPay);
+    System.out.println(formatter.formatRegularEmployee(numHoursWorked, payRate, grossPay, socialSecurityTax, stateTax, federalTax, unionDues, insuranceCharge,  netPay));
     System.out.println("Thank you for using the Payroll Calculator Program!");
   }
 }
